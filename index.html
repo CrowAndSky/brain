@@ -37,40 +37,53 @@
         ol, ul {
             list-style: none;
         }
+        .nav {
+            margin: 1rem 0 2rem  5rem;
+        }
+        .subject-container {
+            display: none;
+        }
+        .subject-container {
+            display: block;
+        }
+        .subject-link {
+            color: #def;
+            display: inline-block;
+            font-size: 2rem;
+            max-width: 12rem;
+            text-align: right;
+            width: 20vmin;
+        }
+        .subject-link:first-child {
+            text-align: left;
+            width: auto;
+        }
+        .subject-link.active {
+            color: #e9eeff;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
 <ul class="nav">
-<li>
+<li class="subject-link">
     JS
 </li>
-<li>
+<li class="subject-link">
     NG
 </li>
-<li>
+<li class="subject-link">
     SVG
 </li>
-<li>
+<li class="subject-link">
     SCSS
 </li>
 </ul>
 
-<ul class="content">
+<ul class="subject">
 
-<li>
-
-<pre><code>
-    $( window ).resize(function() {
-        consle.log("test");
-    });
-</code></pre>
-
-</li>
-
-
-
-<li>
+<li class="subject-container">
 
 <pre><code>
     $( window ).resize(function() {
@@ -82,7 +95,7 @@
 
 
 
-<li>
+<li class="subject-container">
 
 <pre><code>
     $( window ).resize(function() {
@@ -94,7 +107,19 @@
 
 
 
-<li>
+<li class="subject-container">
+
+<pre><code>
+    $( window ).resize(function() {
+        consle.log("test");
+    });
+</code></pre>
+
+</li>
+
+
+
+<li class="subject-container">
 
 <pre><code>
     $( window ).resize(function() {
@@ -114,5 +139,23 @@
 <pre><code>
 </code></pre>
  -->
+
+
+ <script type="text/javascript">
+ $(document).ready( function(){
+    var navLinks = $('.subject-link'),
+         subjectContainers = $('.subject-container');
+
+    subjectContainers.eq(0).addClass('active');
+    subjectContainers.on('click', function(){
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+    })
+
+
+
+});
+</script>
+
 </body>
 </html>
