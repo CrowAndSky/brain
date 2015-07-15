@@ -50,7 +50,8 @@
             color: #def;
             display: inline-block;
             font-size: 2rem;
-            max-width: 12rem;
+            max-width: 8rem;
+            min-width: 4rem;
             text-align: right;
             width: 20vmin;
         }
@@ -78,6 +79,12 @@
 </li>
 <li class="subject-link">
     SCSS
+</li>
+<li class="subject-link">
+    UNIX
+</li>
+<li class="subject-link">
+    GIT
 </li>
 </ul>
 
@@ -128,11 +135,27 @@
 </code></pre>
 
 </li>
+
+
+<!-- UNIX -->
+<li class="subject-container">
+
+<pre><code>
+    npm ls > rocks.txt
+</code></pre>
+
+</li>
+
+<!-- GIT -->
+<li class="subject-container">
+
+<pre><code>
+    git clean -xdf -e "bower_components" -e "node_modules" --dry-run
+</code></pre>
+
+</li>
+
 </ul>
-
-
-
-
 
 
 <!--
@@ -143,11 +166,12 @@
 
  <script type="text/javascript">
  $(document).ready( function(){
-    var navLinks = $('.subject-link'),
+    var subjectLinks = $('.subject-link'),
          subjectContainers = $('.subject-container');
 
+    subjectLinks.eq(0).addClass('active');
     subjectContainers.eq(0).addClass('active');
-    subjectContainers.on('click', function(){
+    subjectLinks.on('click', function(){
         $('.active').removeClass('active');
         $(this).addClass('active');
     })
