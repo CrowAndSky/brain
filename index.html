@@ -38,16 +38,18 @@
             list-style: none;
         }
         .nav {
-            margin: 1rem 0 2rem  5rem;
+            display: flex;
+            justify-content: space-around;
+            margin: 1rem 0;
         }
         .subject-container {
             display: none;
         }
-        .subject-container {
-            display: block;
+        .subject-container.active-content {
+            display: inline-block;
         }
         .subject-link {
-            color: #def;
+            color: #abc;
             display: inline-block;
             font-size: 2rem;
             max-width: 8rem;
@@ -60,8 +62,12 @@
             width: auto;
         }
         .subject-link.active {
-            color: #e9eeff;
+            color: #fff;
             font-weight: bold;
+        }
+        p {
+            color: #839493;
+            padding: 1em;
         }
     </style>
 </head>
@@ -86,52 +92,149 @@
 <li class="subject-link">
     GIT
 </li>
+<li class="subject-link">
+    LOCAL
+</li>
+<li class="subject-link">
+    ENVIRO
+</li>
 </ul>
 
 <ul class="subject">
 
+ <!-- JS -->
 <li class="subject-container">
 
 <pre><code>
-    $( window ).resize(function() {
-        consle.log("test");
-    });
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
 </code></pre>
 
 </li>
 
 
-
+<!--  NG -->
 <li class="subject-container">
 
 <pre><code>
-    $( window ).resize(function() {
-        consle.log("test");
-    });
+    $http.get( 'lib/urn-colors.json' ).success( function( data ) {
+        $scope.allColors = data;
+    } );
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
 </code></pre>
 
 </li>
 
 
-
+<!--  SVG  -->
 <li class="subject-container">
 
 <pre><code>
-    $( window ).resize(function() {
-        consle.log("test");
-    });
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
 </code></pre>
 
 </li>
 
 
-
+<!--  SCSS   -->
 <li class="subject-container">
 
 <pre><code>
-    $( window ).resize(function() {
-        consle.log("test");
-    });
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
 </code></pre>
 
 </li>
@@ -141,7 +244,27 @@
 <li class="subject-container">
 
 <pre><code>
+    ifconfig |grep inet
+</code></pre>
+
+<pre><code>
     npm ls > rocks.txt
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
 </code></pre>
 
 </li>
@@ -153,31 +276,98 @@
     git clean -xdf -e "bower_components" -e "node_modules" --dry-run
 </code></pre>
 
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+</li>
+
+
+<!-- LOCAL -->
+<li class="subject-container">
+
+<pre><code>
+    ssh prw01s@corpad13-g (Mac OS password) / startserv / pointToMyPC (SSO)
+</code></pre>
+
+<pre><code>
+    browser-sync start --files "style.css, hueness.js" --server
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+</li>
+
+
+<!-- ENV -->
+<li class="subject-container">
+
+<p>
+    There are IRE endpoints that front-end code interfaces with via API/AJAX requests, and those requests are constructed with URI origins, one of which is "https://maint-dev-www.sherwin-williams.com". But naturally, any origin hosting the API can serve as an IRE endpoint context. Scene7 also hosts an API, but it's on a dedicated origin, e.g. "//sherwin.scene7.com"
+</p>
+
+<p>
+    You have to go through F5 to iPlanet.  iPlanet has to route the request to weblogic.  Weblogic has to send the request to URLRewrite.xml.  URLRewrite has to evaluate every rule that doesn't match, until it finds the one you put in, then send the redirect.
+</p>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
+<pre><code>
+    ----
+</code></pre>
+
 </li>
 
 </ul>
 
 
-<!--
-<pre><code>
-</code></pre>
- -->
-
-
  <script type="text/javascript">
+
  $(document).ready( function(){
     var subjectLinks = $('.subject-link'),
          subjectContainers = $('.subject-container');
 
     subjectLinks.eq(0).addClass('active');
-    subjectContainers.eq(0).addClass('active');
+    subjectContainers.eq(0).addClass('active-content');
     subjectLinks.on('click', function(){
+        var currentIndex = $(this).index();
         $('.active').removeClass('active');
+        $('.active-content').removeClass('active-content');
         $(this).addClass('active');
+        subjectContainers.eq(currentIndex).addClass('active-content');
     })
-
-
-
 });
 </script>
 
