@@ -54,12 +54,6 @@
             font-size: 2rem;
             max-width: 8rem;
             min-width: 4rem;
-            text-align: right;
-            width: 20vmin;
-        }
-        .subject-link:first-child {
-            text-align: left;
-            width: auto;
         }
         .subject-link.active {
             color: #fff;
@@ -106,7 +100,16 @@
 <li class="subject-container">
 
 <pre><code>
-    ----
+    switch (true) {
+        case (targetSubStringPosition < 0):
+            var out = input;
+            break;
+        case (targetSubStringPosition > 0):
+            var out = input.substring(0, targetSubStringPosition) + '<span class="prevent-string-breaking">' + targetSubString + '</span>' + input.substring(targetSubStringPosition + targetSubString.length);
+            break;
+        default:
+            var out = '<span class="prevent-string-breaking">' + targetSubString + '</span>' + input.substring(targetSubStringPosition + targetSubString.length);
+    }
 </code></pre>
 
 <pre><code>
@@ -303,7 +306,7 @@
 </code></pre>
 
 <pre><code>
-    ----
+    defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
 </code></pre>
 
 <pre><code>
@@ -368,6 +371,40 @@
         $(this).addClass('active');
         subjectContainers.eq(currentIndex).addClass('active-content');
     })
+
+
+
+    var input = 'the Sherwin-Williams test';
+            var targetSubString = 'Sherwin-Williams';
+            var targetSubStringPosition = input.search(targetSubString);
+            console.log(targetSubStringPosition);
+
+            switch (true) {
+                case (targetSubStringPosition < 0):
+                    var out = input;
+                    break;
+                case (targetSubStringPosition > 0):
+                    var out = input.substring(0, targetSubStringPosition) + targetSubString + '-----' + input.substring(targetSubStringPosition + targetSubString.length);
+                    break;
+                default:
+                    var out = '-----' + targetSubString + '-----' + input.substring(targetSubStringPosition + targetSubString.length);
+            }
+
+            // switch (true) {
+            //     case (targetSubStringPosition < 0):
+            //         var out = input;
+            //         break;
+            //     case (targetSubStringPosition > 0):
+            //         var out = input.substring(0, targetSubStringPosition) + '<span class="prevent-string-breaking">' + targetSubString + '</span>' + input.substring(targetSubStringPosition + targetSubString.length);
+            //         break;
+            //     default:
+            //         var out = '<span class="prevent-string-breaking">' + targetSubString + '</span>' + input.substring(targetSubStringPosition + targetSubString.length);
+            // }
+
+            console.log(out);
+
+
+
 });
 </script>
 
