@@ -306,6 +306,10 @@
 </code></pre>
 
 <pre><code>
+    browser-sync start --files "src/css/style.css, dist/js/dreamInColor.js" --server
+</code></pre>
+
+<pre><code>
     defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder
 </code></pre>
 
@@ -332,15 +336,16 @@
 </p>
 
 <pre><code>
-    ----
+    http://www.sherwin-williams.com/resolve/urn:palette:concepts_in_color
+    http://www.sherwin-williams.com/resolve/urn:color-brand:SW/colorCollections
+    http://www.sherwin-williams.com/resolve/urn:color-brand:SW/colors
+    http://www.sherwin-williams.com/color-visualization/services/color/SW/all
+    http://www.sherwin-williams.com/color-visualization/services/color/SW/collection/all
+    http://www.sherwin-williams.com/color-visualization/services/scene/stock/all
 </code></pre>
 
 <pre><code>
-    ----
-</code></pre>
-
-<pre><code>
-    ----
+    Regarding integration with Commerce, the way we are trying to build CVT via Jenkins is exactly what we'll want for Commerce.  We will deploy the build artifacts to IHS docroot (the IBM flavor of Apache).  That is one of the reasons why I am adamant about deploying to the iPlanet docroot in the near term.
 </code></pre>
 
 <pre><code>
